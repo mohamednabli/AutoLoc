@@ -2,7 +2,7 @@ package tn.esprit.autoloc.web.controller;
 
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.autoloc.domain.Paiement;
-import tn.esprit.autoloc.service.PaiementService;
+import tn.esprit.autoloc.service.IPaiementService;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import java.util.List;
 @RequestMapping("/api/paiements")
 public class PaiementController {
 
-    private final PaiementService paiementService;
+    private final IPaiementService paiementService;
 
-    public PaiementController(PaiementService paiementService) {
+    public PaiementController(IPaiementService paiementService) {
         this.paiementService = paiementService;
     }
 

@@ -2,7 +2,7 @@ package tn.esprit.autoloc.web.controller;
 
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.autoloc.domain.Employe;
-import tn.esprit.autoloc.service.EmployeService;
+import tn.esprit.autoloc.service.IEmployeService;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import java.util.List;
 @RequestMapping("/api/employes")
 public class EmployeController {
 
-    private final EmployeService employeService;
+    private final IEmployeService employeService;
 
-    public EmployeController(EmployeService employeService) {
+    public EmployeController(IEmployeService employeService) {
         this.employeService = employeService;
     }
 

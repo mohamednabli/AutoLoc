@@ -2,7 +2,7 @@ package tn.esprit.autoloc.web.controller;
 
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.autoloc.domain.Reservation;
-import tn.esprit.autoloc.service.ReservationService;
+import tn.esprit.autoloc.service.IReservationService;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import java.util.List;
 @RequestMapping("/api/reservations")
 public class ReservationController {
 
-    private final ReservationService reservationService;
+    private final IReservationService reservationService;
 
-    public ReservationController(ReservationService reservationService) {
+    public ReservationController(IReservationService reservationService) {
         this.reservationService = reservationService;
     }
 

@@ -2,7 +2,7 @@ package tn.esprit.autoloc.web.controller;
 
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.autoloc.domain.Equipement;
-import tn.esprit.autoloc.service.EquipementService;
+import tn.esprit.autoloc.service.IEquipementService;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import java.util.List;
 @RequestMapping("/api/equipements")
 public class EquipementController {
 
-    private final EquipementService equipementService;
+    private final IEquipementService equipementService;
 
-    public EquipementController(EquipementService equipementService) {
+    public EquipementController(IEquipementService equipementService) {
         this.equipementService = equipementService;
     }
 

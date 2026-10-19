@@ -2,7 +2,7 @@ package tn.esprit.autoloc.web.controller;
 
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.autoloc.domain.Maintenance;
-import tn.esprit.autoloc.service.MaintenanceService;
+import tn.esprit.autoloc.service.IMaintenanceService;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import java.util.List;
 @RequestMapping("/api/maintenances")
 public class MaintenanceController {
 
-    private final MaintenanceService maintenanceService;
+    private final IMaintenanceService maintenanceService;
 
-    public MaintenanceController(MaintenanceService maintenanceService) {
+    public MaintenanceController(IMaintenanceService maintenanceService) {
         this.maintenanceService = maintenanceService;
     }
 

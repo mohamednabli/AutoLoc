@@ -7,7 +7,7 @@ import tn.esprit.autoloc.repository.AgenceRepository;
 import java.util.List;
 
 @Service
-public class AgenceService {
+public class AgenceService implements IAgenceService {
 
     private final AgenceRepository agenceRepository;
 
@@ -15,22 +15,27 @@ public class AgenceService {
         this.agenceRepository = agenceRepository;
     }
 
+    @Override
     public Agence addAgence(Agence agence) {
         return agenceRepository.save(agence);
     }
 
+    @Override
     public List<Agence> getAllAgences() {
         return agenceRepository.findAll();
     }
 
+    @Override
     public Agence getAgenceById(Long id) {
         return agenceRepository.findById(id).orElse(null);
     }
 
+    @Override
     public Agence updateAgence(Agence agence) {
         return agenceRepository.save(agence);
     }
 
+    @Override
     public void deleteAgence(Long id) {
         agenceRepository.deleteById(id);
     }

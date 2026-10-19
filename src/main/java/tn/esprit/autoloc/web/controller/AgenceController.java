@@ -2,7 +2,7 @@ package tn.esprit.autoloc.web.controller;
 
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.autoloc.domain.Agence;
-import tn.esprit.autoloc.service.AgenceService;
+import tn.esprit.autoloc.service.IAgenceService;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import java.util.List;
 @RequestMapping("/api/agences")
 public class AgenceController {
 
-    private final AgenceService agenceService;
+    private final IAgenceService agenceService;
 
-    public AgenceController(AgenceService agenceService) {
+    public AgenceController(IAgenceService agenceService) {
         this.agenceService = agenceService;
     }
 

@@ -2,7 +2,7 @@ package tn.esprit.autoloc.web.controller;
 
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.autoloc.domain.Client;
-import tn.esprit.autoloc.service.ClientService;
+import tn.esprit.autoloc.service.IClientService;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import java.util.List;
 @RequestMapping("/api/clients")
 public class ClientController {
 
-    private final ClientService clientService;
+    private final IClientService clientService;
 
-    public ClientController(ClientService clientService) {
+    public ClientController(IClientService clientService) {
         this.clientService = clientService;
     }
 

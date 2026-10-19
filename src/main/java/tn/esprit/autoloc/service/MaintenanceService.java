@@ -7,7 +7,7 @@ import tn.esprit.autoloc.repository.MaintenanceRepository;
 import java.util.List;
 
 @Service
-public class MaintenanceService {
+public class MaintenanceService implements IMaintenanceService {
 
     private final MaintenanceRepository maintenanceRepository;
 
@@ -15,22 +15,27 @@ public class MaintenanceService {
         this.maintenanceRepository = maintenanceRepository;
     }
 
+    @Override
     public Maintenance addMaintenance(Maintenance maintenance) {
         return maintenanceRepository.save(maintenance);
     }
 
+    @Override
     public List<Maintenance> getAllMaintenances() {
         return maintenanceRepository.findAll();
     }
 
+    @Override
     public Maintenance getMaintenanceById(Long id) {
         return maintenanceRepository.findById(id).orElse(null);
     }
 
+    @Override
     public Maintenance updateMaintenance(Maintenance maintenance) {
         return maintenanceRepository.save(maintenance);
     }
 
+    @Override
     public void deleteMaintenance(Long id) {
         maintenanceRepository.deleteById(id);
     }

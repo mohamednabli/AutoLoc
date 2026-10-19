@@ -2,7 +2,7 @@ package tn.esprit.autoloc.web.controller;
 
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.autoloc.domain.Contrat;
-import tn.esprit.autoloc.service.ContratService;
+import tn.esprit.autoloc.service.IContratService;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import java.util.List;
 @RequestMapping("/api/contrats")
 public class ContratController {
 
-    private final ContratService contratService;
+    private final IContratService contratService;
 
-    public ContratController(ContratService contratService) {
+    public ContratController(IContratService contratService) {
         this.contratService = contratService;
     }
 
